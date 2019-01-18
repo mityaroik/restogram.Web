@@ -46,8 +46,8 @@ export class Lang extends React.Component {
   render() {
     return <Grid>
       <Button onClick={this.handleClickOpen}>
-        <img src={flag_ua} alt='flag_ua' />
-        <Typography>Українська (UAH - грн)</Typography>
+        <img src={flag_ua} alt='flag_ua' className="flagImg"/>
+        <Typography variant="subheading" className="lang-btn-text">Українська (UAH - грн)</Typography>
       </Button>
 
       <Dialog

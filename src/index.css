@@ -1,3 +1,15 @@
 @import url(./styles/normalize.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=cyrillic,cyrillic-ext");
 .langLabel {
   margin: 20px 0; }
+
+.flagImg {
+  height: 18px;
+  width: 24px;
+  margin-right: 5px; }
+
+.lang-btn-text {
+  text-transform: none; }
+
+div.header {
+  margin: 10px; }

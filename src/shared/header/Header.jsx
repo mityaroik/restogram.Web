@@ -14,7 +14,7 @@ export class Header extends React.Component {
   }
 
   render() {
-    return <Grid container alignItems={'center'} justify={'space-around'} direction={'row'}>
+    return <Grid container alignItems={'center'} justify={'space-around'} direction={'row'} className="header">
       <Link className="logo-link" to="/">
         <Grid item xs={4}> <img src={logo} alt="logo" /> </Grid>
       </Link>
