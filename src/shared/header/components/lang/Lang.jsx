@@ -44,10 +44,10 @@ export class Lang extends React.Component {
   }
 
   render() {
-    return <Grid>
+    return <Grid className="lang">
       <Button onClick={this.handleClickOpen}>
-        <img src={flag_ua} alt='flag_ua' className="flagImg"/>
-        <Typography variant="subheading" className="lang-btn-text">Українська (UAH - грн)</Typography>
+        <img src={flag_ua} alt='flag_ua' className="lang__flagImg"/>
+        <Typography variant="subheading" className="lang__btn">Українська (UAH - грн)</Typography>
       </Button>
 
       <Dialog
@@ -65,7 +65,6 @@ export class Lang extends React.Component {
               native: true,
             }}
             fullWidth
-            className="langLabel"  
           >
             {country.map(option => (
               <option key={option.value} value={option.value}>
@@ -84,7 +83,6 @@ export class Lang extends React.Component {
               native: true,
             }}
             fullWidth
-            className="langLabel"
           >
             {language.map(option => (
               <option key={option.value} value={option.value}>
@@ -103,7 +101,6 @@ export class Lang extends React.Component {
               native: true,
             }}
             fullWidth
-            className="langLabel"
           >
             {currency.map(option => (
               <option key={option.value} value={option.value}>

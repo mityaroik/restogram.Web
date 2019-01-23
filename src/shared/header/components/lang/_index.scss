@@ -1,13 +1,11 @@
-.langLabel {
-    margin: 20px 0;
-}
+.lang {
+    &__flagImg{
+        height: 18px;
+        width: 24px;
+        margin-right: 5px;
+    }
 
-.flagImg {
-    height: 18px;
-    width: 24px;
-    margin-right: 5px;
-}
-
-.lang-btn-text{
-    text-transform: none;
+    &__btn {
+        text-transform: none;
+    }
 }
