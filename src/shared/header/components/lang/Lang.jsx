@@ -2,8 +2,9 @@ import React from 'react';
 
 import { Grid, Typography, Button, Dialog, TextField } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
+import MediaQuery from 'react-responsive';
 
-import flag_ua from '../../../../media/flag_ua.png'
+import flag_ua from '../../../../media/flag_ua.png';
 
 const country = [
   {
@@ -44,17 +45,21 @@ export class Lang extends React.Component {
   }
 
   render() {
-    return <Grid className="lang">
-      <Button onClick={this.handleClickOpen}>
+    return <Grid>
+      <Button onClick={this.handleClickOpen} className="lang__openBtn">
         <img src={flag_ua} alt='flag_ua' className="lang__flagImg"/>
-        <Typography variant="subheading" className="lang__btn">Українська (UAH - грн)</Typography>
+        <Typography variant="subheading" className="lang__textBtn">
+          <MediaQuery query="(min-width: 960px)">
+            {(i) => i ? <span> Українська (UAH - грн) </span> : <span> Укр (грн) </span> }
+          </MediaQuery>
+        </Typography>
       </Button>
 
       <Dialog
         onClose={this.handleClose}
         open={this.state.open}
       >
-          <CloseIcon color="primary" onClick={this.handleClose} cursor="pointer" />
+          <CloseIcon color="primary" onClick={this.handleClose} cursor="pointer" className="lang__closeBtn" />
           {/* Country */}
           <TextField
             select
@@ -65,6 +70,7 @@ export class Lang extends React.Component {
               native: true,
             }}
             fullWidth
+            className="lang__label"
           >
             {country.map(option => (
               <option key={option.value} value={option.value}>
@@ -83,6 +89,7 @@ export class Lang extends React.Component {
               native: true,
             }}
             fullWidth
+            className="lang__label"
           >
             {language.map(option => (
               <option key={option.value} value={option.value}>
@@ -101,6 +108,7 @@ export class Lang extends React.Component {
               native: true,
             }}
             fullWidth
+            className="lang__label"
           >
             {currency.map(option => (
               <option key={option.value} value={option.value}>
@@ -108,7 +116,7 @@ export class Lang extends React.Component {
               </option>
             ))}
           </TextField>
-          <Button onClick={this.handleClose} variant="contained" color="primary">
+          <Button onClick={this.handleClose} variant="contained" color="primary" className="lang__saveBtn">
             Зберегти
             </Button>
       </Dialog>
@@ -116,9 +124,7 @@ export class Lang extends React.Component {
   }
 
   handleClickOpen = () => {
-    this.setState({
-      open: true,
-    });
+    this.setState({ open: true });
   };
 
   handleClose = () => {

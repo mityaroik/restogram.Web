@@ -5,8 +5,63 @@
   width: 24px;
   margin-right: 5px; }
 
-.lang__btn {
-  text-transform: none; }
+.lang__textBtn {
+  text-transform: none;
+  white-space: nowrap; }
 
-div.header {
-  margin: 10px; }
+.lang__label {
+  margin: 35px 20px 0px;
+  width: 300px; }
+
+.lang__saveBtn {
+  padding: 15px;
+  margin-top: 25px; }
+
+.lang__dialog {
+  padding-top: 15px; }
+
+.lang__closeBtn {
+  position: absolute;
+  right: 0;
+  width: 27px;
+  height: 27px; }
+
+.lang__openBtn {
+  float: right; }
+
+@media screen and (max-width: 660px) {
+  .lang__textBtn {
+    display: none; } }
+
+@media screen and (max-width: 500px) {
+  .lang__openBtn {
+    margin: 0 -10px;
+    float: unset; } }
+
+@media screen and (max-width: 450px) {
+  .lang__label {
+    width: auto; } }
+
+.signIn {
+  display: flex; }
+  .signIn__icon {
+    padding-right: 5px; }
+  .signIn__openBtn {
+    text-transform: none; }
+  .signIn__textBtn {
+    white-space: nowrap; }
+
+@media screen and (max-width: 600px) {
+  .signIn {
+    width: 0; }
+    .signIn__textBtn {
+      display: none; }
+    .signIn__openBtn {
+      margin: auto; } }
+
+.header {
+  margin-top: 15px; }
+
+@media screen and (max-width: 450px) {
+  .header__logo {
+    width: 90%; } }

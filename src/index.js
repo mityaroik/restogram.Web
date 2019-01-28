@@ -12,6 +12,14 @@ const store = createStore(reducer, applyMiddleware(thunk));
 
 ReactDOM.render((
   <Provider store={store}>
-    { Routes }
+    {Routes}
   </Provider>
-), document.getElementById('root'));
+), document.getElementById('root'),
+// insert custom styles in the end 
+  () => {
+    const styles = document.querySelectorAll('style[type="text/css"]');
+    const lastStyle = document.querySelector("style:last-child");
+    styles.forEach((item) => {
+      lastStyle.parentNode.insertBefore(item, lastStyle.nextSibling)
+    })
+  });
