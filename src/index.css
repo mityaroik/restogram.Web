@@ -50,6 +50,18 @@
     text-transform: none; }
   .signIn__textBtn {
     white-space: nowrap; }
+  .signIn__form {
+    display: flex;
+    flex-direction: column; }
+  .signIn__label {
+    margin: 10px 20px 10px; }
+  .signIn__submitBtn__textBtn {
+    color: white;
+    margin: 2px 5px 0; }
+  .signIn__submitBtn {
+    margin-top: 25px; }
+  .signIn__dialog > div > div {
+    min-width: 300px; }
 
 @media screen and (max-width: 600px) {
   .signIn {
@@ -60,8 +72,21 @@
       margin: auto; } }
 
 .header {
-  margin-top: 15px; }
+  margin: 15px 0 5px; }
 
 @media screen and (max-width: 450px) {
   .header__logo {
     width: 90%; } }
+
+.footer {
+  background: #303437;
+  padding: 10px; }
+  .footer__copyright {
+    color: white;
+    margin: auto; }
+
+.home {
+  background-image: url("./media/baner.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  height: calc(100vh - 160px); }

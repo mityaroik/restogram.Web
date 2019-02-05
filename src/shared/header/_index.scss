@@ -1,8 +1,8 @@
 @import './components/lang/index';
-@import './components/sign-in/index';
+@import './components/signIn/index';
 
 .header {
-    margin-top: 15px;
+    margin: 15px 0 5px;
 }
 
 @media screen and (max-width: 450px) {

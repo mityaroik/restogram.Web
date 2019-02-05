@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import logo from '../../media/logo.png';
 import Lang from '../header/components/lang/Lang';
-import SignIn from '../header/components/sign-in/SignIn';
+import SignIn from '../header/components/signIn/SignIn';
 
 import { Grid } from '@material-ui/core';
 
